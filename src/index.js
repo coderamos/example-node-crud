@@ -7,7 +7,7 @@ const users = ['Goku', 'Vegeta'];
 
 //global middlewares
 server.use((request, response, next) => {
-  console.log(`METHOD: ${request.method}, ENDPOINT: ${request.url},  `);
+  console.log(`[💻] [${request.method.toUpperCase()}] ${request.url}`);
   return next();
 });
 
@@ -15,7 +15,7 @@ server.use((request, response, next) => {
 function checkNameExists(request, response, next) {
   request.body.name
     ? next()
-    : response.status(400).json({ error: 'the property NAME is required!' });
+    : response.status(400).json({ error: '[❗]the property NAME is required!' });
 }
 
 function checkIndexExists(request, response, next) {
