@@ -1,4 +1,4 @@
-# node | EXAMPLE NODE CRUD
+# example | NODE CRUD
 
 ## About This Project
 
